@@ -1,0 +1,109 @@
+/* Models page. Builds on the shared .row / .card styles. */
+
+.models-row {
+  align-items: flex-start;
+}
+
+.models-row > .row-control {
+  margin-top: 2px;
+}
+
+.models-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.models-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.models-detail {
+  color: var(--text-2);
+}
+
+.models-status {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+  max-width: 420px;
+}
+
+.models-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.models-extra {
+  margin-top: 6px;
+}
+
+.models-check {
+  display: inline-flex;
+  color: var(--success);
+  padding: 4px;
+}
+
+.models-spinner {
+  width: 14px;
+  height: 14px;
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.models-error {
+  color: var(--danger);
+  font-size: 12px;
+  margin: 0;
+}
+
+.models-warning {
+  display: block;
+  color: var(--warning);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.models-line {
+  display: block;
+  margin-top: 2px;
+}
+
+.models-result {
+  margin: 4px 0 0;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--success-soft);
+  color: var(--text);
+}
+
+.models-note {
+  margin: 0;
+}
+
+.models-cli {
+  gap: 10px;
+}
+
+.models-cli-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.models-cli-fields .select,
+.models-cli-fields .input {
+  width: 100%;
+}
+
+.modal .field .input,
+.modal .field .select {
+  width: 100%;
+}

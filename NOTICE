@@ -1,0 +1,12 @@
+OpenDictate
+Copyright 2026 OpenDictate contributors
+
+This product is a Windows port of BetterWispr (https://github.com/opennookorg/betterwispr),
+licensed under the Apache License, Version 2.0. Portions of the text processing, data model,
+meeting notes and app behavior are adapted from BetterWispr's Swift sources, as noted at the
+top of each ported Rust module.
+
+Third-party components keep their own licenses:
+- transcribe-rs (MIT), whisper.cpp / ggml (MIT), ONNX Runtime (MIT), Tauri (Apache-2.0/MIT)
+- Parakeet TDT model weights by NVIDIA (CC-BY-4.0), ONNX exports by istupakov
+- Whisper model weights by OpenAI (MIT)

@@ -1,0 +1,7 @@
+# Build tools in their default install locations. Override with environment variables if yours differ.
+# Tip: set `[build] target-dir` in a .cargo/config.toml above this repo to keep build output elsewhere.
+[env]
+LIBCLANG_PATH = { value = "C:/Program Files/LLVM/bin", force = false }
+CMAKE = { value = "C:/Program Files/CMake/bin/cmake.exe", force = false }
+# NVIDIA architectures for the `cuda` feature: 75 Turing, 86 Ampere, 89 Ada (RTX 40), 120 Blackwell (RTX 50).
+CMAKE_CUDA_ARCHITECTURES = { value = "75;86;89;120", force = false }

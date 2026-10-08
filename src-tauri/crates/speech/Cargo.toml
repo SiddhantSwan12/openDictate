@@ -1,0 +1,24 @@
+[package]
+name = "opendictate-speech"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[features]
+# Whisper runs on the CPU by default. Enable one GPU backend:
+# `cuda` for NVIDIA (needs the CUDA Toolkit at build and run time) or `vulkan` for any modern GPU.
+default = []
+cuda = ["transcribe-rs/whisper-cuda"]
+vulkan = ["transcribe-rs/whisper-vulkan"]
+
+[dependencies]
+transcribe-rs = { version = "0.3.12", features = ["whisper-cpp", "onnx", "ort-directml", "vad-silero"] }
+anyhow = "1"
+log = "0.4"
+opendictate-core = { path = "../core" }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "json", "multipart"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+hound = "3"

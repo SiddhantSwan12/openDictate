@@ -1,0 +1,40 @@
+.vocab-empty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  color: var(--text-2);
+}
+
+.vocab-row {
+  min-height: 52px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.vocab-phrase {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vocab-phrase > span:first-child {
+  overflow-wrap: anywhere;
+}
+
+.vocab-replacement {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 320px;
+  overflow-wrap: anywhere;
+}
+
+.vocab-replacement svg {
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.vocab-row .btn.icon {
+  color: var(--text-2);
+}

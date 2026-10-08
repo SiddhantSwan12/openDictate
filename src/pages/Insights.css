@@ -1,0 +1,216 @@
+.insights {
+  --insights: #14b8a6;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insights-row {
+  display: grid;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.insights-row-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.insights-row-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@container (max-width: 780px) {
+  .insights-row-3,
+  .insights-row-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.insight-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.insight-card hr {
+  border: none;
+  border-top: 1px solid var(--stroke);
+  margin: 0;
+  width: 100%;
+}
+
+.insight-value {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.insight-caption {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-2);
+}
+
+.insight-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.insight-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.pace-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pace-track {
+  height: 10px;
+}
+
+.pace-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--text-3) 50%, transparent);
+}
+
+.pace-fill.you {
+  background: var(--insights);
+}
+
+.usage-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.usage-bar > svg {
+  width: 22px;
+  flex-shrink: 0;
+}
+
+.usage-track {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usage-fill {
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.usage-label {
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendar {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.calendar-weekdays {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--text-2);
+}
+
+.calendar-weekdays span {
+  height: 12px;
+}
+
+.calendar-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.calendar-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.calendar-head .btn.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.calendar-months {
+  display: flex;
+  gap: 3px;
+}
+
+.calendar-months span {
+  width: 12px;
+  flex-shrink: 0;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.calendar-grid {
+  display: flex;
+  gap: 3px;
+}
+
+.calendar-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.calendar-cell {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.calendar-cell.streak {
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--text) 70%, transparent);
+}
+
+.calendar-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

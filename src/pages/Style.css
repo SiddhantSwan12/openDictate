@@ -1,0 +1,23 @@
+.style-examples {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  min-height: 0;
+}
+
+.style-example p {
+  margin: 4px 0 0;
+  white-space: pre-wrap;
+}
+
+.style-warning {
+  min-height: 0;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.style-warning svg {
+  color: var(--warning);
+  flex-shrink: 0;
+  margin-top: 2px;
+}

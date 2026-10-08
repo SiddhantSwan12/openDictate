@@ -1,0 +1,17 @@
+.settings-capturing {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.settings-command {
+  min-height: 44px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
